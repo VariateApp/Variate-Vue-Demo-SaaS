@@ -52,4 +52,10 @@ const router = new Router({
     ]
 })
 
+router.beforeEach((to, from, next) => {
+    router.app.$variate.initialize({
+        view: to,
+    }, next);
+});
+
 export default router
