@@ -9,7 +9,7 @@
                 <pre>npm install variate-react</pre>
             </div>
             <div>
-                <router-link to="docs" class="button white">Read the Docs</router-link>
+                <a href="#" @click="trackEvent('custom', 'Read the Docs')" class="button" :class="buttonColor">Read the Docs</a>
             </div>
         </div>
     </div>
@@ -22,12 +22,30 @@ export default {
     computed: {
         ...mapVariables({
             headline: 'The developer-friendly a/b testing tool',
+            buttonColor: 'white'
         }),
     },
+    methods: {
+        trackEvent(type, name, value) {
+            value = value ? value : 0;
+            this.$variate.track({
+                name: name, 
+                type: type, 
+                value: value
+            });
+        }
+    }
 }
 
 </script>
 
 <style>
+
+.button.green {
+    @apply bg-green-400
+}
+.button.blue {
+    @apply bg-blue-400 text-white
+}
 
 </style>
