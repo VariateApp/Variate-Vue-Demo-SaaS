@@ -3,7 +3,7 @@ The purpose of this repo is to serve as a playground to install and demonstrate 
 
 ## Clone this repo
 ```
-git clone https://github.com/VariateApp/variate-vue-demo-saas.git variate-vue-demo-saas
+git clone https://github.com/VariateHQ/variate-vue-demo-saas.git variate-vue-demo-saas
 ```
 
 ### Install dependencies
